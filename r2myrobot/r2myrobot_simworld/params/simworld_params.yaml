@@ -1,0 +1,41 @@
+simworld_node:
+  ros__parameters:
+    pose_topic: '/r2myrobot/pose2d'
+    pose_topic_stamped: '/r2myrobot/pose_stamped'
+    subscribe_cmd_vel: true
+    cmd_vel_topic: '/cmd_vel'
+    publish_scan_frame: 'lidar_link'
+    publish_base_frame: 'base_link'
+    lidar:
+      range_min: 0.05
+      range_max: 12.0
+      fov: 4.1887902047863905  # 240 deg
+      angle_increment: 0.017453292519943295  # 1 deg
+      noise_std: 0.0
+      update_rate: 10.0
+    # Field/world polygons (meters). Main boundaries always present.
+    world:
+      - "[[0.05, 0.05], [6.05, 0.05], [6.05, 9.5], [0.05, 9.5]]"   # Blue main boundary (50..6050,50..9500 mm)
+      - "[[6.1, 0.05], [12.1, 0.05], [12.1, 9.5], [6.1, 9.5]]"    # Red main boundary (6100..12100 mm)
+    # Area enable flags (set true to include area walls)
+    meihua_blue_enabled: true
+    arena_blue_enabled: false
+    meihua_red_enabled: true
+    arena_red_enabled: false
+    # Area polygon definitions (stringified YAML lists). Each entry can be a polygon (closed list) or a segment ([p1,p2]).
+    meihua_blue:
+      - "[[1.25, 3.25], [4.85, 3.25], [4.85, 8.06], [1.25, 8.06]]"
+    arena_blue:
+      - "[[1.55, 9.55], [6.05, 9.55]]"
+      - "[[6.05, 9.55], [6.05, 12.05]]"
+      - "[[6.05, 12.05], [0.05, 12.05]]"
+      - "[[0.05, 12.05], [0.05, 9.55]]"
+      - "[[1.55, 9.55], [1.55, 10.85]]"
+    meihua_red:
+      - "[[7.3, 3.25], [10.9, 3.25], [10.9, 8.06], [7.3, 8.06]]"
+    arena_red:
+      - "[[10.55, 9.55], [6.1, 9.55]]"
+      - "[[6.1, 9.55], [6.1, 12.05]]"
+      - "[[6.1, 12.05], [12.1, 12.05]]"
+      - "[[12.1, 12.05], [12.1, 9.55]]"
+      - "[[10.55, 9.55], [10.55, 10.85]]"
