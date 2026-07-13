@@ -57,8 +57,8 @@ graph TD
     
     EKF -->|nav_msgs/Odometry<br>topic: '/odometry/filtered'| RViz
     
-    classDef package fill:#f9f9f9,stroke:#333,stroke-width:2px;
-    classDef node fill:#fff,stroke:#333,stroke-width:1px;
+    classDef package fill:#f9f9f9,stroke:#333,stroke-width:2px,color:#000;
+    classDef node fill:#ffffff,stroke:#333,stroke-width:1px,color:#000;
     class GUI,Bridge,SimWorld,EKF,RViz package;
 ```
 
