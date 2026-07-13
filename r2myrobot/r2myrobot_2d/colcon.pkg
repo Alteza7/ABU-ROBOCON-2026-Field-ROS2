@@ -1,0 +1,4 @@
+{
+    "name": "r2myrobot_2d",
+    "hooks": ["share/r2myrobot_2d/hook/r2myrobot_2d.sh"]    
+} 

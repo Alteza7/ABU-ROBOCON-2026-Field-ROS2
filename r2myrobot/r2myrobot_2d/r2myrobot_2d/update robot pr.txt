@@ -1,0 +1,13 @@
+robot nantinya bisa dipanggil ke map 2d r2myrobot_2d ada tombol pemanggilan robot, dan opsi mau di sisi biru atau merah
+
+update area di mana robot bisa berada.
+
+A. sisi biru:
+area dalam lapangn(di luar itu merupakan Batasan yang tidak bisa dilewati robot atau tembok) persegi Panjang x,y: titik (50,50) ke titik (6050, 9500).
+lalu ada tembok atau area khusus yang bisa dimasuki Ketika diberi izin atau switch on off persegi Panjang x,y: titik (1250, 3250) ke titik (4850, 8060) area ini Bernama MEIHUA FOREST.
+lalu ada lagi tembok atau area khusus yang bisa dimasuki Ketika diberi izin atau switch on off persegi Panjang x,y: titik (50, 9550) ke titik (6050, 12050), persegi panjangnya kehilangan garis di titik (50, 9550) ke titik (1550, 9550), ketambahan garis di titik (1550, 9550) ke titik (1550, 10850) itulah tembok dari area ini, area ini Bernama ARENA
+
+A. sisi merah:
+area dalam lapangn(di luar itu merupakan Batasan yang tidak bisa dilewati robot atau tembok) persegi Panjang x,y: titik (12100,50) ke titik (6100, 9500).
+lalu ada tembok atau area khusus yang bisa dimasuki Ketika diberi izin atau switch on off persegi Panjang x,y: titik (10900, 3250) ke titik (7300, 8060) area ini Bernama MEIHUA FOREST.
+lalu ada lagi tembok atau area khusus yang bisa dimasuki Ketika diberi izin atau switch on off persegi Panjang x,y: titik (12100, 9550) ke titik (6100, 12050), persegi panjangnya kehilangan garis di titik (12100, 9550) ke titik (10600, 9550), ketambahan garis di titik (10600, 9550) ke titik (10600, 10850) itulah tembok dari area ini, area ini Bernama ARENA

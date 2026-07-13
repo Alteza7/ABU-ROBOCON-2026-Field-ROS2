@@ -1,0 +1,70 @@
+satuan mm
+aku mulai dari luas keseluruhan lapangan:
+persegi keseluruhan termasuk dinding, Panjang x lebar: 12100 x 12150 berwarna #C9A792 sebagai lapisan paling bawah.
+
+a. sisi biru:
+1. persegi Panjang ditarik dari titik (x,y): (50,50) ke titik (6050, 12050) warnanya #81D2D6, lapisan kedua dari paling bawah.
+
+2. persegi Panjang ditarik dari titik (x,y): (50,2020) ke titik (6050, 9550) warnanya #949EA0, lapisan ketiga dari paling bawah.
+
+3. persegi Panjang ditarik dari titik (x,y): (50,2050) ke titik (6050, 9500) warnanya #80BFD1, lapisan keempat dari paling bawah.
+
+4. persegi Panjang ditarik dari titik (x,y): (1250,3250) ke titik (4850, 8060) warnanya #2A7138, lapisan kelima dari paling bawah.
+
+5. persegi ditarik dari titik (x,y): (50,50) ke titik (1050, 1050) warnanya #3100FF, lapisan keenam dari paling bawah.
+
+6. persegi Panjang ditarik dari titik (x,y): (2250, 50) ke titik (3050, 350) warnanya #9B5F00, lapisan keenam dari paling bawah.
+
+7. persegi ditarik dari titik (x,y): (4250, 50) ke titik (5050, 850) warnanya #3100FF, lapisan keenam dari paling bawah.
+
+8. persegi ditarik dari titik (x,y): (50, 11050) ke titik (1050, 12050) warnanya #3100FF, lapisan keenam dari paling bawah.
+
+9. persegi Panjang ditarik dari titik (x,y): (3550, 9550) ke titik (5050, 9850) warnanya #E6E22B, lapisan keenam dari paling bawah.
+
+10. persegi ditarik dari titik (x,y): (50, 9350) ke titik (1550, 10850) warnanya #C0BDB5, lapisan ketujuh dari paling bawah.
+
+b. sisi merah:
+1. persegi Panjang ditarik dari titik (x,y): (12100,50) ke titik (6100, 12050) warnanya #FEBAA3, lapisan kedua dari paling bawah.
+
+2. persegi Panjang ditarik dari titik (x,y): (12100,2020) ke titik (6100, 9550) warnanya #949EA0, lapisan ketiga dari paling bawah.
+
+3. persegi Panjang ditarik dari titik (x,y): (12100,2050) ke titik (6100, 9500) warnanya #ECA297, lapisan keempat dari paling bawah.
+
+4. persegi Panjang ditarik dari titik (x,y): (10900,3250) ke titik (7300, 8060) warnanya #2A7138, lapisan kelima dari paling bawah.
+
+5. persegi ditarik dari titik (x,y): (12100,50) ke titik (11100, 1050) warnanya #DF2222, lapisan keenam dari paling bawah.
+
+6. persegi Panjang ditarik dari titik (x,y): (9900, 50) ke titik (9100, 350) warnanya #9B5F00, lapisan keenam dari paling bawah.
+
+7. persegi ditarik dari titik (x,y): (7900, 50) ke titik (7100, 850) warnanya #DF2222, lapisan keenam dari paling bawah.
+
+8. persegi ditarik dari titik (x,y): (1050, 11050) ke titik (50, 12050) warnanya #DF2222, lapisan keenam dari paling bawah.
+
+9. persegi Panjang ditarik dari titik (x,y): (8600, 9550) ke titik (7100, 9850) warnanya #E6E22B, lapisan keenam dari paling bawah.
+
+10. persegi ditarik dari titik (x,y): (12100, 9350) ke titik (10600, 10850) warnanya #C0BDB5, lapisan ketujuh dari paling bawah.
+
+c. tambahan:
+1. persegi Panjang ditarik dari titik (x,y): (5925, 400) ke titik (6225, 1600) warnanya #9B5F00, lapisan kedelapan dari paling bawah.
+
+2. dot hitam tebal di titik (x,y): (6075, 500), (6075, 700), (6075, 900), (6075, 1100), (6075, 1300), (6075, 1500), lapisan ketujuh dari yang paling bawah.
+
+3. dot hitam di titik (x,y): (2350, 200), (2550, 200), (2750, 200), (2950, 200), lapisan ketujuh dari yang paling bawah.
+
+4. dot hitam di titik (x,y): (9200, 200), (9400, 200), (9600, 200), (9800, 200), lapisan ketujuh dari yang paling bawah.
+
+5. persegi Panjang ditarik dari titik (x,y): (5925, 9940) ke titik (6225, 11560) warnanya #FCF7F5, lapisan kedelapan dari paling bawah.
+
+6. tambahan GUI disamping kanan tampilan lapangan ditampilkan log dan nav bar di bawahnya berisi tombol sederhana bawaan library aja (tombolnya masih kosong, nanti ku fungsikan)
+
+d. section gridlines:
+1. susunan grid
+d.1. sisi biru:
+grid garis hitam dengan panjang dan lebar (1200, 1200) per satu gridnya dengan total daerah yang diberi grid dari titik (x,y): (50,2050) ke titik (6050, 9250), lapisannya berada di atasnya yang paling atas. Dijadikan array "zona2gridbiru" dihitung dari start titiknya yaitu (50,2050)
+
+d.2. sisi merah:
+grid hitam dengan panjang dan lebar (1200, 1200) per satu gridnya dengan total daerah yang diberi grid dari titik (x,y): (12100,2050) ke titik (6100, 9250), lapisannya berada di atasnya yang paling atas. Dijadikan array "zona2gridmerah" dihitung dari start titiknya yaitu (12100,2050)
+
+2. konfigurasi
+tiap-tiap grid yang sudah masuk ke array bisa diklik dan setelah diklik muncul keterangan titik (x,y) tengah dari area grid tersebut dimasukkan ke log di poin c. 6. klik nya bounce aja
+
