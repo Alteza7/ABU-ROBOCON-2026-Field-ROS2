@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="r2myrobot">
+  <!--
+    Simple 2D robot description (Xacro)
+    Frames: base_footprint -> base_link -> lidar_link (fixed)
+    Parameters:
+      base_size: side length of square base (meters)
+      base_height: thickness of base (meters)
+      lidar_x,y,z,yaw (meters, radians)
+  -->
+
+  <xacro:property name="base_size" value="0.4"/>
+  <xacro:property name="base_height" value="0.1"/>
+  <xacro:property name="lidar_x" value="0.0"/>
+  <xacro:property name="lidar_y" value="0.0"/>
+  <xacro:property name="lidar_z" value="0.1"/>
+  <xacro:property name="lidar_yaw" value="0.0"/>
+
+  <!-- base_footprint is an empty frame (2D origin) -->
+  <link name="base_footprint"/>
+
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 ${base_height/2}" rpy="0 0 0"/>
+      <geometry>
+        <box size="${base_size} ${base_size} ${base_height}"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0.2 0.4 0.8 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 ${base_height/2}" rpy="0 0 0"/>
+      <geometry>
+        <box size="${base_size} ${base_size} ${base_height}"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="2.0"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.02"/>
+    </inertial>
+  </link>
+
+  <!-- Fixed joint from base_footprint -> base_link (to preserve 2D origin semantics) -->
+  <joint name="base_footprint_to_base_link" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- lidar link (fixed joint relative to base_link) -->
+  <link name="lidar_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder length="0.02" radius="0.03"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="base_link_to_lidar" type="fixed">
+    <parent link="base_link"/>
+    <child link="lidar_link"/>
+    <origin xyz="${lidar_x} ${lidar_y} ${lidar_z}" rpy="0 0 ${lidar_yaw}"/>
+  </joint>
+
+</robot>
